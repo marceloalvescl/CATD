@@ -1,0 +1,29 @@
+Data : 14/11/2020
+Horario : 18:11:02
+Probabilidade de chuva : 90%
+Precipitacao de chuva : 22mm
+------------Data : 14/11/2020
+Horario : 18:12:36
+Probabilidade de chuva : 90%
+Precipitacao de chuva : 22mm
+-----------------
+Data : 14/11/2020
+Horario : 18:12:37
+Probabilidade de chuva : 90%
+Precipitacao de chuva : 21mm
+-----------------
+Data : 13/11/2020
+Horario : 18:12:37
+Probabilidade de chuva : 90%
+Precipitacao de chuva : 21mm
+-----------------
+Data : 13/11/2020
+Horario : 18:40:23
+Probabilidade de chuva : 90%
+Precipitacao de chuva : 22mm
+-----------------
+Data : 14/11/2020
+Horario : 18:43:39
+Probabilidade de chuva : 90%
+Precipitacao de chuva : 22mm
+-----------------
