@@ -3,9 +3,31 @@
   <head>
     <title>Weather API Consumption</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div class="head">
+      <ul>
+        <li>CATD</li>
+      </ul>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>Horario</th>
+          <th>Probabilidade de chuva</th>
+          <th>Precipitacao de chuva</th>
+        </tr>
+        {% for i in result %}
+        <tr>
+          <td>{{ i['Data'] }}</td>
+          <td>{{ i['Horario'] }}</td>
+          <td>{{ i['Probabilidade de chuva'] }}</td>
+          <td>{{ i['Precipitacao de chuva'] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
   </body>
 </html>

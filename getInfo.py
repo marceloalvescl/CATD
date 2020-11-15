@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 import time
 import requests
 
@@ -25,41 +26,26 @@ def getRainInfoFromJson(json):
   precipitationAmount = json['data'][0]['rain']['precipitation']
   return date, horario, rainProbability, precipitationAmount
 
-def writeIntoFile(dict):
+def writeIntoFile(d):
   f = open('./static/requisicoes.txt', 'a')
-  for k, v in dict.items():
-    f.write(str(k) + ' : '+ str(v) + '\n')
-  f.write("-----------------\n")
+  j = json.dumps(d)
+  f.write(j)
+  f.write("\n")
   f.close()
 
 def getLastRequestDate():
   f = open('./static/requisicoes.txt', 'r')
-  linhaData, linhaHorario = getLastTimeAndDate()
-  ctd = 1
-  data = ""
-  horario = ""
-  for x in f:
-    ctd += 1
-    if(linhaData == ctd):
-      data = f.readline()
-      horario = f.readline()
+  lastline = f.read().splitlines()[-1]
+  d = json.loads(lastline)
+  data = d['Data']
+  horario = d['Horario']
   return data, horario
 
-def getLastTimeAndDate():
-  f = open('./static/requisicoes.txt', 'r')
-  ctd = 0
-  for x in f:
-    ctd += 1
-  linhaHorario = ctd - 3
-  linhaData = ctd - 4
-  return linhaData, linhaHorario
 
 def compareLastDateAndHour(data, horario):
   now = datetime.now()
   dataAtual = now.strftime("%d/%m/%Y")
   horarioAtual = now.strftime("%H:%M:%S")
-  data = data[7:]
-  horario = horario[10:]
   data = datetime.strptime(data.strip(), "%d/%m/%Y")
   dataAtual = datetime.strptime(dataAtual.strip(), "%d/%m/%Y")
   horario = datetime.strptime(horario.strip(), "%H:%M:%S")
@@ -76,6 +62,8 @@ def compareLastDateAndHour(data, horario):
 
 while(True):
   data, horario = getLastRequestDate()
+  print(data)
+  print(horario)
   if(compareLastDateAndHour(data, horario)):
     getInformacoes()
   time.sleep(3600)
