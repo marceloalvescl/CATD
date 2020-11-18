@@ -27,9 +27,11 @@ def compareLastDateAndHour(data, horario):
 
   dataAtual = datetime.strptime(dataAtual.strip(), "%d/%m/%Y")
   horarioAtual = datetime.strptime(horarioAtual.strip(), "%H:%M:%S")
-
+  
   if(data < dataAtual):
     if(horario < horarioAtual):
+      return True
+    if(int((dataAtual - data).days) >= 2):
       return True
   print("Ainda não está no horário para requisição")
   return False

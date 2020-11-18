@@ -13,20 +13,66 @@
     </div>
     <div>
       <table>
+        <caption>
+          Detalhes do plantio
+        </caption>
+        <tr>
+          <th>Data de inicio</th>
+          <th>Area do plantio</th>
+        </tr>
+        <tr>
+          <td>{{ config['Data'] }}</td>
+          <td>{{ config['Area de plantio'] }} km²</td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <br />
+    <div>
+      <table>
+        <caption>
+          Informações diárias
+        </caption>
         <tr>
           <th>Data</th>
           <th>Horario</th>
           <th>Probabilidade de chuva</th>
           <th>Precipitacao de chuva</th>
+          <th>Quantidade de água a regar no dia</th>
+          <th>Tempo de irrigação no dia</th>
         </tr>
-        {% for i in result %}
+        {% for i in daily %}
         <tr>
           <td>{{ i['Data'] }}</td>
           <td>{{ i['Horario'] }}</td>
-          <td>{{ i['Probabilidade de chuva'] }}</td>
-          <td>{{ i['Precipitacao de chuva'] }}</td>
+          <td>{{ i['Probabilidade de chuva'] }} %</td>
+          <td>{{ i['Precipitacao de chuva'] }} mm</td>
+          <td>{{ i['Quantidade de agua a regar no dia'] }} litros</td>
+          <td>{{ i['Tempo de irrigacao no dia'] }} minutos</td>
         </tr>
         {% endfor %}
+      </table>
+    </div>
+    <br /><br />
+    <div>
+      <table>
+        <caption>
+          Resumo do cultivo até o momento
+        </caption>
+        <tr>
+          <th>Quantidade de dias</th>
+          <th>Quantidade que seria irrigado sem a solução</th>
+          <th>Quantidade que foi irrigado</th>
+          <th>Quantidade de água economizado</th>
+        </tr>
+        <tr>
+          <td>{{ soFar['Quantidade de dias'] }}</td>
+          <td>
+            {{ soFar['Quantidade que seria irrigado sem a solucao'] }} litros
+          </td>
+          <td>{{ soFar['Quantidade que foi irrigado'] }} litros</td>
+          <td>{{ soFar['Quantidade de agua economizada'] }} litros</td>
+        </tr>
       </table>
     </div>
   </body>

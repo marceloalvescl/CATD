@@ -1,3 +1,5 @@
-{"Data": "12/11/2020", "Horario": "17:11:26", "Probabilidade de chuva": "90%", "Precipitacao de chuva": "22mm"}
-{"Data": "13/11/2020", "Horario": "18:22:24", "Probabilidade de chuva": "90%", "Precipitacao de chuva": "22mm"}
-{"Data": "14/11/2020", "Horario": "19:56:04", "Probabilidade de chuva": "90%", "Precipitacao de chuva": "22mm"}
+{"Data": "12/11/2020", "Horario": "17:11:26", "Probabilidade de chuva": 90, "Precipitacao de chuva": 22, "Quantidade de agua a regar no dia": 2.81, "Tempo de irrigacao no dia": 56}
+{"Data": "13/11/2020", "Horario": "18:22:24", "Probabilidade de chuva": 90, "Precipitacao de chuva": 22, "Quantidade de agua a regar no dia": 2.81, "Tempo de irrigacao no dia": 56}
+{"Data": "14/11/2020", "Horario": "19:56:04", "Probabilidade de chuva": 90, "Precipitacao de chuva": 22, "Quantidade de agua a regar no dia": 2.81, "Tempo de irrigacao no dia": 56}
+{"Data": "15/11/2020", "Horario": "19:03:01", "Probabilidade de chuva": 67, "Precipitacao de chuva": 20, "Quantidade de agua a regar no dia": 2.83, "Tempo de irrigacao no dia": 57}
+{"Data": "17/11/2020", "Horario": "02:28:17", "Probabilidade de chuva": 67, "Precipitacao de chuva": 20, "Quantidade de agua a regar no dia": 2.83, "Tempo de irrigacao no dia": 57}

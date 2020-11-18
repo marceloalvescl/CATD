@@ -15,10 +15,10 @@ def getInformacoes():
     response = {
       "Data": date,
       "Horario": horario,
-      "Probabilidade de chuva": str(rainProbability) + " %",
-      "Precipitacao de chuva": str(precipitationAmount) + " mm",
-      "Quantidade de agua a regar no dia": str(amountOfWater) + " litros",
-      "Tempo de irrigacao no dia": str(round(amountOfTime / 60)) + " minutos"
+      "Probabilidade de chuva": rainProbability,
+      "Precipitacao de chuva": precipitationAmount,
+      "Quantidade de agua a regar no dia": amountOfWater,
+      "Tempo de irrigacao no dia": round(amountOfTime / 60)
     }
     wf.writeIntoFile(response)
   except Exception as e:

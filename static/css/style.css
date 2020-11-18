@@ -3,6 +3,11 @@ table {
   margin-right: auto;
 }
 
+caption {
+  font-size: 25px;
+  background-color: blueviolet;
+}
+
 table,
 th,
 td {
